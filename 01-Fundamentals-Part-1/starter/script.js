@@ -68,6 +68,23 @@ const user = {
   },
 };
 
+//typeof
+//void
+//delete
+//await The await operator is used to wait for a Promise and get its fulfillment value. It can only be used inside an async function or at the top level of a module.
+function resolveAfter2Seconds(x) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(x);
+    }, 20);
+  });
+}
+
+async function f1() {
+  const x = await resolveAfter2Seconds(10);
+  console.log("Await : ", x);
+}
+
 console.log(user.address.city);
 console.log(user.address.Roadno); //undefined that is good
 // console.log(user.address.Roadno.houseno); //error not good here ?. optional chaining work
@@ -93,4 +110,27 @@ if (age >= 18) {
 } else {
   const yearleft = 18 - age;
   console.log(`you too young. wait another ${yearleft} year :)`);
+}
+
+//Type Conversion
+
+const inputyear = "2002";
+console.log(inputyear + 21);
+console.log(Number(inputyear) + 21);
+console.log(Number("Saksham")); //Number
+console.log(typeof NaN);
+console.log(String(21), 21);
+
+//5 falsy values: 0,'',undefined,null,NaN
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean("Saksham"));
+console.log(Boolean({}));
+
+//True fasly value
+const money = 0;
+if (money) {
+  console.log("Don't spend it All");
+} else {
+  console.log("You should get a job!");
 }
