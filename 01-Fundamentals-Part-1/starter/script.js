@@ -32,8 +32,8 @@ x--; //x=x-1;
 console.log(x);
 
 // comparison operator >,<,>=,<=
-const age = 20;
-console.log(age > 21);
+const ages = 20;
+console.log(ages > 21);
 
 let BMI;
 
@@ -86,3 +86,11 @@ console.log(users[1]?.name);
 name = "Saksham";
 const hello = `I'm ${name}`;
 console.log(hello);
+
+const age = 15;
+if (age >= 18) {
+  console.log("You can start driving");
+} else {
+  const yearleft = 18 - age;
+  console.log(`you too young. wait another ${yearleft} year :)`);
+}
