@@ -150,3 +150,42 @@ if (favourite === 23) {
 } else {
   console.log("Not 23 Number Because prompt take string and we use ===");
 }
+
+//switch Statement
+const day = "saturday";
+
+switch (day) {
+  case "monday":
+    console.log("Plan Course Structure");
+    console.log("Go to coding meetup");
+    break;
+
+  case "tuesday":
+    console.log("Prepare theory Videos");
+    break;
+
+  case "wednesday":
+  case "thursday":
+    console.log("Write code examples");
+    break;
+
+  case "saturday":
+  case "sunday":
+    console.log("Enjoy the Weekend");
+    break;
+  default:
+    console.log("Not a Valid Day");
+}
+
+if (day === "monday") {
+  console.log("Plan Course Structure");
+  console.log("Go to coding meetup");
+} else if (day === "tuesday") {
+  console.log("Prepare theory Videos");
+} else if (day === "wednesday" || day === "thursday") {
+  console.log("Write code examples");
+} else if (day === "saturday" || day === "sunday") {
+  console.log("Enjoy the Weekend");
+} else {
+  console.log("Not a Valid Day");
+}
