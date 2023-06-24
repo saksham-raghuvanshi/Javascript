@@ -134,3 +134,19 @@ if (money) {
 } else {
   console.log("You should get a job!");
 }
+
+//Simple way of getting a value from webpage by prompt function
+
+const favourite = prompt("What is Your Favourite Number? ");
+console.log(favourite);
+console.log(typeof favourite);
+
+if (favourite == 23) {
+  console.log("Cool!");
+}
+
+if (favourite === 23) {
+  console.log("Cool!");
+} else {
+  console.log("Not 23 Number Because prompt take string and we use ===");
+}
