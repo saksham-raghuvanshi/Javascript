@@ -43,5 +43,28 @@ const calages = (birthyeah, firstname) => {
   const age = 2023 - birthyeah;
   return `${firstname} age is ${age}`;
 };
-
 console.log(calages(2002, "Saksham"));
+
+const cutPieces = function (fruit) {
+  return fruit * 4;
+};
+
+function fruitProcessors(apples, oranges) {
+  const applepieces = cutPieces(apples);
+  const orangepieces = cutPieces(oranges);
+  const juice = `juice with ${applepieces} pieces of apples and ${orangepieces} pieces of oranges.`;
+  return juice;
+}
+
+console.log(fruitProcessors(5, 4));
+
+const friends = ["Saksham", "yugesh", "Harshit"];
+console.log(friends);
+
+console.log(friends[0]);
+console.log(friends[2]);
+
+const firstName = "tenzing";
+
+const group = [firstName, "Lovepreet", "ishita", friends];
+console.log(group);
