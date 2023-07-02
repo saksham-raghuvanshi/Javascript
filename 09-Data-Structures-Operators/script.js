@@ -36,6 +36,12 @@ const restaurant = {
       `Order Received! ${this.starterMenu[starterindex]} and ${this.mainMenu[mainindex]} will be delivered to ${address} at ${time}}`
     );
   },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your declicious pasta with ${ing1}, ${ing2} and ${ing3}`
+    );
+  },
 };
 
 //Simple Array assignment
@@ -132,3 +138,39 @@ restaurant.orderDelivery({
   mainindex: 2,
   starterindex: 2,
 });
+
+// create new array by adding beg array
+
+const arr1 = [7, 8, 9];
+const begnewArr = [1, 2, arr1[0], arr1[1], arr1[2]];
+console.log(begnewArr);
+
+//spread operator
+const newArr = [1, 2, ...arr1];
+console.log(newArr);
+console.log(...newArr, 'Show individual');
+
+//individual ellement Iterables
+const str = 'Saksham';
+const letters = [...str];
+console.log(letters);
+console.log(...str);
+
+const ingredients = [
+  prompt("Let's make pasta! Ingredient1?"),
+  prompt('Ingredient2?'),
+  prompt('Ingredient1?'),
+];
+
+console.log(ingredients);
+
+// restaurant.orderPasta(ingredients[0],ingredients[1],ingredients[2])
+restaurant.orderPasta(...ingredients);
+
+const newRestaurant = { ...restaurant, founder: 'Saksham' };
+console.log(newRestaurant);
+
+const restaurantcopy = { ...restaurant };
+restaurantcopy.name = 'Saksham Restaurant';
+console.log(restaurantcopy.name);
+console.log(restaurant.name);
