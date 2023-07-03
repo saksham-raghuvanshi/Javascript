@@ -215,3 +215,29 @@ add(...tp);
 restaurant.orderPizza('mushrooms', 'onion', 'olives');
 
 restaurant.orderPizza('mushrooms');
+
+//short-circuiting
+// use any data type, return any data type
+console.log('-----OR-----');
+console.log(3 || 'Saksham');
+console.log('' || 'Saksham');
+console.log(true || 0);
+console.log(undefined || null);
+
+const guest = restaurant.numguest ? restaurant.numguest : 10;
+console.log(guest);
+
+console.log('-----AND-----');
+
+console.log(0 && 'Saksham');
+console.log(7 && 'Saksham');
+
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('mushrooms', 'spinach');
+}
+
+restaurant.orderPizza && restaurant.orderPizza('a', 'b');
+
+//Nullish operator : null and undefined ( Not 0 or " ")
+const gurstcorrect = restaurant.numguest ?? 10;
+console.log(gurstcorrect);
