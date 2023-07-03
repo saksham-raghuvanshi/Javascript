@@ -42,6 +42,11 @@ const restaurant = {
       `Here is your declicious pasta with ${ing1}, ${ing2} and ${ing3}`
     );
   },
+
+  orderPizza: function (mainingredients, ...otheringredients) {
+    console.log(mainingredients);
+    console.log(otheringredients);
+  },
 };
 
 //Simple Array assignment
@@ -174,3 +179,39 @@ const restaurantcopy = { ...restaurant };
 restaurantcopy.name = 'Saksham Restaurant';
 console.log(restaurantcopy.name);
 console.log(restaurant.name);
+
+const arr2 = [1, 2, ...[3, 4]];
+
+const [t, u, ...others] = [1, 2, 3, 4, 5];
+console.log(t, u, others);
+
+const [pizza, , risotto, ...otherfood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+
+console.log(pizza, risotto, otherfood);
+
+//objects rest
+
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
+
+const add = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  console.log(sum);
+};
+
+add(2, 3);
+add(5, 3, 7, 2);
+add(8, 2, 5, 3, 2, 1, 4);
+
+const tp = [23, 5, 7];
+add(...tp);
+
+restaurant.orderPizza('mushrooms', 'onion', 'olives');
+
+restaurant.orderPizza('mushrooms');
