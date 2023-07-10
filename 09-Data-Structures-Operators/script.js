@@ -241,3 +241,76 @@ restaurant.orderPizza && restaurant.orderPizza('a', 'b');
 //Nullish operator : null and undefined ( Not 0 or " ")
 const gurstcorrect = restaurant.numguest ?? 10;
 console.log(gurstcorrect);
+
+//Looping Array: The for-of loop
+const menus = [...restaurant.starterMenu, ...restaurant.mainMenu];
+for (const item of menus) {
+  console.log(item);
+}
+for (const item of menus.entries()) {
+  console.log(`${item[0] + 1}.${item[1]} `);
+}
+
+//opening error
+console.log(restaurant.openingHours.mon);
+console.log(restaurant.openingHours.mon?.open);
+
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
+for (const day of days) {
+  const open = restaurant.openingHours[day]?.open;
+  console.log(`on ${day}, we open at ${open}`);
+}
+
+for (const day of days) {
+  const open = restaurant.openingHours[day]?.open || 'closed';
+  console.log(`on ${day}, we open at ${open}`);
+}
+
+for (const day of Object.keys(openingHours)) {
+  console.log(day);
+}
+
+const orderSet = new Set([
+  'pasta',
+  'pizza',
+  'pizza',
+  'Risotto',
+  'pasta',
+  'pizza',
+]);
+console.log(orderSet);
+console.log(new Set('Jonas'));
+
+console.log(orderSet.size);
+console.log(orderSet.has('pizza'));
+console.log('Garlic Bread');
+
+const rest = new Map();
+rest.set('name', 'Classico Italiano');
+rest.set(1, 'Firenxe', 'Italy');
+console.log(rest.set(2, 'Lisbon,Portugak'));
+
+rest
+  .set('categories', ['Italian', 'Pizzeria', 'Organic'])
+  .set('open', 11)
+  .set('close', 23)
+  .set(true, 'We are open')
+  .set(false, 'We are close');
+
+console.log(rest.get('name')); //key value
+console.log(rest.get(true));
+console.log(rest.get(1));
+
+const time = 8;
+console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+
+console.log(rest.has('categories'));
+rest.set([1, 2], 'Test');
+console.log(rest);
+console.log(rest.size);
+
+//console.log([1,2]) not work
+const arrr = [1, 2];
+rest.set(arr, 'Test');
+console.log(rest.get(arr));
