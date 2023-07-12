@@ -314,3 +314,38 @@ console.log(rest.size);
 const arrr = [1, 2];
 rest.set(arr, 'Test');
 console.log(rest.get(arr));
+
+// Map
+
+const question = new Map([
+  ['question', 'Which is best Programming Language'],
+  [1, 'C'],
+  [2, 'Javascript'],
+  ['correct', 2],
+  [true, 'correct'],
+  [false, 'Try again!'],
+]);
+
+console.log(question);
+
+//convert Object into Map
+
+const hoursMap = new Map(Object.entries(openingHours));
+console.log(hoursMap);
+
+//Quiz app
+console.log(question.get('question'));
+for (const [key, value] of question) {
+  if (typeof key === 'number') console.log(`Answer ${key}: ${value}`);
+}
+
+const answer = Number(prompt('Your answer'));
+console.log(answer);
+
+console.log(question.get(question.get('correct') === answer));
+
+//convert map to array
+console.log([...question]);
+// console.log(question.entries());
+console.log([...question.keys()]);
+console.log([...question.values()]);
