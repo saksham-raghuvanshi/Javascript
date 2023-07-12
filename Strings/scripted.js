@@ -1,4 +1,6 @@
 //Working with String
+
+//mdn String replace
 "use-strict";
 const airline = "TAP Air India";
 const plane = "A320";
@@ -117,3 +119,6 @@ CapitalizeName("mulakh raj raghuvanshi");
 const message = "Go to gate 23";
 console.log(message.padStart(25, "+")); // 25 long
 console.log("Saksham".padStart(25, "+")); //25 long
+
+const repeat = "Bad weather... All Departues Delayed...";
+console.log(repeat.repeat(5)); //repeat 5 times
