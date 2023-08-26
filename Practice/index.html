@@ -1,0 +1,96 @@
+<!-- Hover <a href="#" onmouseover="thankYou()"></a> -->
+<!-- link type <a>javascript:alertText()</a> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="/icon.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Bankist</title>
+
+    <script>
+        function markLine(lineWidth) {
+            document.write("<HR SIZE=" + lineWidth + ">");
+          }
+        
+          
+        function thankYou(){
+            alert("Thank You")
+        } 
+        
+        function alertText(){
+            alert("This is text!")
+        }
+
+
+        var fontsize = "+4"
+        var fontColor = "red"
+    </script>
+
+  </head>
+  <body>
+   
+    <nav>
+      <p class="welcome">Log in to get started</p>
+      <img src="./logo.png" class="logo" alt="logo"/>
+      <form class="login">
+        <input class="login__input login__input--user"
+        type="text"
+        placeholder="user"
+
+        />
+        <input  
+        type="text"
+        placeholder="PIN"
+        class="login__input login__input--pin"
+        />
+
+        <button class="login__btn">&rarr;</button>
+
+
+      </form>
+    </nav>
+
+    <p id="output"></p>
+
+ <a href="https://intel.com" onmouseover="thankYou()" >Hover</a>
+ <br>
+ <br>
+
+ <a href="javascript:alertText()">Click Me</a>
+ <br>
+ <font color="&{fontColor};">Saksham</font>
+
+    <script>
+        markLine(30)
+    </script>
+    <script>
+
+        printText()
+        alertfun()
+        
+       
+        function alertfun(){
+            alert("Javascript is funs")
+        }
+
+
+    
+
+
+    </script>
+
+   
+    <script src="./pratice.js"></script>
+  </body>
+</html>
